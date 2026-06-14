@@ -7,20 +7,18 @@ func main() {
 	fmt.Println("Сколько дней продлится поездка?")
 	fmt.Scanln(&days)
 
-	var contry string
-	fmt.Println("В какую страну вы едите?")
-	fmt.Scanln(&contry)
-
 	hotelPrice := 4000
 	total := hotelPrice * days
 
 	// Проверяем условие: если дней больше 7
-	if days > 10 && contry == "Грузия" {
-		fmt.Println("Ура! Вы получили скидку 20% как VIP клиент!")
-		// Рассчитываем скидку (делим общую сумму на 10 и вычитаем её из total)
+	if days > 14 {
+		fmt.Println("Ура! Вы получили скидку 20% ")
 		total = total - (total / 5)
-	} else {
-		fmt.Println("Скидка не применяется")
+	} else if days > 7 {
+		fmt.Println("Ура! Вы получили скидку 10% ")
+		total = total - (total / 10)
+	} else if days < 7 {
+		fmt.Println("К сожалению у вас нет скидки")
 
 	}
 
