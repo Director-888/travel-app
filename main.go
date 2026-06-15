@@ -3,13 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var days int
-	fmt.Println("Сколько дней продлится поездка?")
-	fmt.Scanln(&days)
+	rubles := 5000.0
+	dollarRate := 92.5
+	dollars := rubles / dollarRate
 
-	hotelPrice := 4000
-	for i := 1; i <= days; i++ {
-		currentTotal := i * hotelPrice
-		fmt.Println("День", i, "стоимость", currentTotal, "рублей")
-	}
+	fmt.Println(dollars)
 }
