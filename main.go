@@ -3,9 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	rubles := 5000.0
-	dollarRate := 92.5
-	dollars := rubles / dollarRate
+	var name string
+	fmt.Println("Как тебя зовут?")
+	fmt.Scanln(&name)
 
-	fmt.Println(dollars)
+	var age int
+	fmt.Println("Сколько тебе лет?")
+	fmt.Scanln(&age)
+
+	var city string
+	fmt.Println("В каком городе живешь?")
+	fmt.Scanln(&city)
+
+	fmt.Println("Привет", name, "Тебе", age, "лет", "и ты живешь в городе", city)
 }
