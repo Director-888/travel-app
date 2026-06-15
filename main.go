@@ -4,14 +4,16 @@ import "fmt"
 
 func main() {
 
-	var age int
-	fmt.Println("Сколько тебе лет?")
-	fmt.Scanln(&age)
+	var correctpassword string
+	fmt.Println("Введите пароль")
+	fmt.Scanln(&correctpassword)
 
-	if age >= 18 {
-		fmt.Println("Доступ разрешен!")
+	password := "secret123"
+
+	if correctpassword == password {
+		fmt.Println("Вход успешно выполнен")
 
 	} else {
-		fmt.Println("Доступ запрещен, вам нужно подрасти!")
+		fmt.Println("Неверный пароль, доступ заблокирован")
 	}
 }
