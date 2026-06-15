@@ -3,17 +3,24 @@ package main
 import "fmt"
 
 func main() {
+	var totalPrice int
 
-	var correctpassword string
-	fmt.Println("Введите пароль")
-	fmt.Scanln(&correctpassword)
+	ticketPrice := 10000
 
-	password := "secret123"
+	var age int
+	fmt.Println("Сколько вам лет?")
+	fmt.Scanln(&age)
 
-	if correctpassword == password {
-		fmt.Println("Вход успешно выполнен")
+	if age < 7 {
+		fmt.Println("У вас скидка 50%!")
+		totalPrice = ticketPrice - (ticketPrice / 2)
 
+	} else if age > 65 {
+		fmt.Println("У вас скидка 30%")
+		totalPrice = ticketPrice - (ticketPrice * 30 / 100)
 	} else {
-		fmt.Println("Неверный пароль, доступ заблокирован")
+		totalPrice = ticketPrice
 	}
+	fmt.Println("Стоимость вашего билета", totalPrice, "рублей")
+
 }
